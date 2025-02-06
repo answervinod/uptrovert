@@ -4,9 +4,16 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Hello Uptrovert</h1>
-      <p>This is a test page</p>
+    <div style={{
+      backgroundColor: '#14213D',
+      color: 'white',
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '24px'
+    }}>
+      <h1>Welcome to Uptrovert</h1>
     </div>
   );
 }
