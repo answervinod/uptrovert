@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
@@ -8,8 +9,8 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
-        <Router> {/* Remove basename prop */}
+      <HashRouter>
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route element={<AuthLayout />}>
@@ -17,8 +18,8 @@ function App() {
               <Route path="/profile" element={<Profile />} />
             </Route>
           </Routes>
-        </Router>
-      </div>
+        </div>
+      </HashRouter>
     </ThemeProvider>
   );
 }
