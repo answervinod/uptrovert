@@ -1,5 +1,4 @@
 {
-  
   "name": "uptrovert",
   "version": "0.1.0",
   "private": true,
@@ -10,9 +9,9 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "framer-motion": "^12.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.14",
     "web-vitals": "^2.1.0"
@@ -44,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "autoprefixer": "10.4.14",
     "gh-pages": "^6.3.0",
