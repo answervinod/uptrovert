@@ -7,16 +7,15 @@ import AuthLayout from './components/AuthLayout';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
+  console.log('App rendering'); // Add this debug log
   return (
     <ThemeProvider>
       <HashRouter>
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+        <div className="min-h-screen bg-white dark:bg-gray-900">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route element={<AuthLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/profile" element={<Profile />} />
-            </Route>
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </HashRouter>

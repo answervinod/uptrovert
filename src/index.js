@@ -9,3 +9,8 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Add error logging
+window.addEventListener('error', (event) => {
+  console.error('Global error:', event.error);
+});
