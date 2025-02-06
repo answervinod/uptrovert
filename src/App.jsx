@@ -4,16 +4,9 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={
-            <div className="p-4">
-              <h1 className="text-2xl">Welcome to Uptrovert</h1>
-            </div>
-          } />
-        </Routes>
-      </HashRouter>
+    <div style={{ padding: '20px' }}>
+      <h1>Hello Uptrovert</h1>
+      <p>This is a test page</p>
     </div>
   );
 }
