@@ -1,25 +1,20 @@
 import { HashRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
 import Home from './components/Home';
-import Profile from './components/Profile';
-import AuthLayout from './components/AuthLayout';
-import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
-  console.log('App rendering'); // Add this debug log
   return (
-    <ThemeProvider>
+    <div className="min-h-screen bg-white">
       <HashRouter>
-        <div className="min-h-screen bg-white dark:bg-gray-900">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={
+            <div className="p-4">
+              <h1 className="text-2xl">Welcome to Uptrovert</h1>
+            </div>
+          } />
+        </Routes>
       </HashRouter>
-    </ThemeProvider>
+    </div>
   );
 }
 

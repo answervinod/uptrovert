@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
+try {
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+} catch (error) {
+  console.error('Rendering error:', error);
+  document.getElementById('root').innerHTML = '<div>Error loading application</div>';
+}
 
 // Add error logging
 window.addEventListener('error', (event) => {
